@@ -31,14 +31,32 @@ resource "aws_default_security_group" "default" {
   }
 }
 
+data "aws_availability_zones" "available" {
+  state = "available"
+}
+
 resource "aws_instance" "my_ubuntu" {
   ami           = "ami-06878d265978313ca"
   key_name      = "sergei-northv"
   instance_type = "t2.micro"
+  availability_zone = data.aws_availability_zones.available.names[0]
   vpc_security_group_ids = [aws_default_security_group.default.id]
   tags = {
     Name    = "My-UbuntuLinux-Server"
     Owner   = "Sergei Epammer"
     project = "Kingsman"
+  }
+}
+
+resource "aws_instance" "my_amazon" {
+  ami           = "ami-0b5eea76982371e91"
+  instance_type = "t2.micro"
+  key_name      = "sergei-northv"
+  availability_zone = data.aws_availability_zones.available.names[1]
+  vpc_security_group_ids = [aws_default_security_group.default.id]
+
+  tags = {
+    Name  = "My-AmazonLinux-Server"
+    Owner = "Sergei Epammer"
   }
 }
