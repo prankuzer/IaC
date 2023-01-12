@@ -27,3 +27,291 @@ override.tf.json
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+
+# build products...
+*.py[co]
+build
+AUTHORS.TXT
+# Emacs backup and autosave files...
+*~
+.\#*
+\#*
+# RPM stuff...
+MANIFEST
+dist
+rpm-build
+# Eclipse/PyDev stuff...
+.project
+.pydevproject
+# PyCharm stuff...
+.idea
+#IntelliJ IDEA stuff..
+*.iml
+#VSCode stuff..
+.vscode/
+# Mac OS X stuff...
+.DS_Store
+# manpage build stuff...
+docs/man/man1/ansible*.1
+docs/man/man1/ansible*.1.asciidoc.in
+docs/man/man3/*
+# Sublime stuff
+*.sublime-project
+*.sublime-workspace
+# docsite stuff...
+docs/docsite/_build
+docs/docsite/*.html
+docs/docsite/htmlout
+docs/docsite/rst/conf.py
+docs/docsite/rst/index.rst
+docs/docsite/rst/cli/ansible-*.rst
+docs/docsite/rst/cli/ansible.rst
+docs/docsite/rst/dev_guide/collections_galaxy_meta.rst
+docs/docsite/rst/dev_guide/testing/sanity/index.rst.new
+docs/docsite/rst/dev_guide/index.rst
+docs/docsite/rst/modules/*.rst
+docs/docsite/rst/collections/*.rst
+!docs/docsite/rst/collections/all_plugins.rst
+docs/docsite/rst/collections/*/*.rst
+docs/docsite/rst/playbooks_directives.rst
+docs/docsite/rst/plugins_by_category.rst
+docs/docsite/rst/plugins/*/*.rst
+docs/docsite/rst/reference_appendices/config.rst
+docs/docsite/rst/reference_appendices/playbooks_keywords.rst
+docs/docsite/rst_warnings
+docs/docsite/searchindex.js
+docs/docsite/_static/*.gif
+docs/docsite/_static/*.png
+docs/docsite/_static/websupport.js
+# Vim swap files
+*.swp
+*.swo
+[._]*.un~
+credentials.yml
+# test output
+*.retry
+*.out
+.pytest_cache/
+.tox
+.cache
+.pytest_cache
+results.xml
+coverage.xml
+/test/units/cover-html
+/test/integration/inventory
+/test/integration/targets/*/backup/
+/test/cache/*
+# Development
+/test/develop
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+venv
+env
+Vagrantfile
+.vagrant
+# Backwards compatibility with `stable-2.9` and earlier branches.
+# Also used in the `devel` branch during early Ansible 2.10 development.
+/lib/ansible.egg-info/
+# First used in the `devel` branch during Ansible 2.10 development.
+/lib/ansible_base.egg-info/
+# First used in the `devel` branch during Ansible 2.11 development.
+/lib/ansible_core.egg-info/
+# vendored lib dir
+lib/ansible/_vendor/*
+!lib/ansible/_vendor/__init__.py
+# test stuff
+/test/integration/cloud-config-*.*
+!/test/integration/cloud-config-*.*.template
+.python-version
+/hacking/tests/selinux/*.mod
+/hacking/tests/selinux/*.pp
+# Release directory
+packaging/release/ansible_release
+/.cache/
+/test/results/
+/test/integration/cloud-config-aws.yml
+/test/integration/inventory.networking
+/test/integration/inventory.winrm
+/test/integration/cloud-config-aws.yml
+/test/integration/cloud-config-cs.ini
+# python 'rope' stuff
+.ropeproject
+# local 'ack' config files
+.ackrc
+# default 'coverage html' results
+htmlcov/
+# default 'coverage' tool data
+.coverage
+# ansible-test coverage results
+test/units/.coverage.*
+/test/integration/cloud-config-azure.yml
+/SYMLINK_CACHE.json
+changelogs/.plugin-cache.yaml
+.ansible-test-timeout.json
+
