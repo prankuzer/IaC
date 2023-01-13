@@ -45,6 +45,7 @@ resource "aws_instance" "my_ubuntu" {
     Name    = "My-UbuntuLinux-Server"
     Owner   = "Sergei Epammer"
     project = "Kingsman"
+    Custodian = "True"
   }
 }
 
@@ -58,5 +59,6 @@ resource "aws_instance" "my_amazon" {
   tags = {
     Name  = "My-AmazonLinux-Server"
     Owner = "Sergei Epammer"
+    Custordian = "True"
   }
 }
