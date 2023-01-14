@@ -59,6 +59,6 @@ resource "aws_instance" "my_amazon" {
   tags = {
     Name  = "My-AmazonLinux-Server"
     Owner = "Sergei Epammer"
-    Custordian = "True"
+    Custodian = "True"
   }
 }
