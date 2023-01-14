@@ -1,0 +1,24 @@
+---
+- name: Install Nginx
+  hosts: all
+  become: true
+  tasks:
+    - name: Install required packages
+      package:
+        name: "{{ item }}"
+      with_items:
+        - nginx
+        - curl
+      when: ansible_os_family == "Debian"
+    - name: Install required packages
+      package:
+        name: "{{ item }}"
+      with_items:
+        - nginx
+        - curl
+      when: ansible_os_family == "RedHat"
+    - name: Start Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: true
