@@ -1,6 +1,6 @@
 ---
-- name: Install Nginx
-  hosts: all
+- name: Install Web Server
+  hosts: linux
   become: true
   tasks:
     - name: Install required packages
@@ -14,11 +14,20 @@
       ansible.builtin.package:
         name: "{{ item }}"
       with_items:
-        - nginx
+        - httpd
         - curl
       when: ansible_os_family == "RedHat"
+
+    - name: Start Apache service
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: true
+      when: ansible_os_family == "RedHat"
+
     - name: Start Nginx service
       ansible.builtin.service:
         name: nginx
         state: started
         enabled: true
+      when: ansible_os_family == "Debian"
