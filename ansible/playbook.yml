@@ -4,21 +4,21 @@
   become: true
   tasks:
     - name: Install required packages
-      package:
+      ansible.builtin.package:
         name: "{{ item }}"
       with_items:
         - nginx
         - curl
       when: ansible_os_family == "Debian"
     - name: Install required packages
-      package:
+      ansible.builtin.package:
         name: "{{ item }}"
       with_items:
         - nginx
         - curl
       when: ansible_os_family == "RedHat"
     - name: Start Nginx service
-      service:
+      ansible.builtin.service:
         name: nginx
         state: started
         enabled: true
