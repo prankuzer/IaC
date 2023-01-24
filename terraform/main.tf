@@ -68,4 +68,3 @@ resource "aws_instance" "my_amazon" {
     Owner = "Sergei Epammer"
   }
 }
-
