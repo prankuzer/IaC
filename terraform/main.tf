@@ -15,7 +15,7 @@ resource "aws_default_security_group" "default" {
   vpc_id = aws_default_vpc.default.id
 
   ingress {
-    description = "Allow port HTTPS"
+    description = "Allow port SSH"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
