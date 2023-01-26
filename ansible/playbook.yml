@@ -3,14 +3,14 @@
   hosts: linux
   become: true
   tasks:
-    - name: Install required packages
+    - name: Install Ubuntu required packages
       ansible.builtin.package:
         name: "{{ item }}"
       with_items:
         - nginx
         - curl
       when: ansible_os_family == "Debian"
-    - name: Install required packages
+    - name: Install Amazon Linux required packages
       ansible.builtin.package:
         name: "{{ item }}"
       with_items:
